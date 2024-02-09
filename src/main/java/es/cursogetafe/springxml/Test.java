@@ -10,6 +10,9 @@ import es.cursogetafe.springxml.negocio.Negocio1;
 public class Test {
 
 	public static void main(String[] args) {
+		
+		System.out.println("Perfil actual: " + System.getProperty("spring.profiles.active"));
+		
 		ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
 		
 		
@@ -17,4 +20,5 @@ public class Test {
 		neg.metodoNegocio();
 	}
 
+//	Abrir run/ run configuration/ arguments/ VM arguments/escribir -Dspring.profiles.active=   el perfil que se va trabajar
 }
